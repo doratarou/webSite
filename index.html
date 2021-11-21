@@ -1,0 +1,181 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>目を大切にしよう</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+
+            *{
+                box-sizing:border-box;
+                margin:0px;
+                font-family:sans-serif;
+
+            }
+
+
+            h1{
+                color: #0000cd;
+                font-size: 37px;
+                /* 
+                *コメント
+                *コメント
+                *楽しいな
+                */
+
+
+            }
+            .box1{
+                background-color: rgb(255, 255, 255);
+                padding: 25px;
+                border:3px solid black;
+                margin:0 0 30px 0;
+                width:auto ;
+                height: 150px;
+                text-align: left;
+
+
+            }
+            .box2{
+                
+                background-color:pink;
+                width:256px ;
+                height: 206px;
+                text-align: left;
+            }
+
+        </style>
+        <script>
+            var red =90;
+            var bool = 0;
+            var w = 900;
+            var radius = 0;
+            var bool2 =0;
+            var imgIndex=0;
+            var ImgList = ["https://erisugulink.com/wp-content/uploads/2018/01/20160130-%E3%80%90%E9%8C%AF%E8%A6%96%E3%80%91%E8%A6%96%E5%8A%9B%E3%81%8C%E6%82%AA%E3%81%84%E4%BA%BA%E3%83%BB%E7%96%B2%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E4%BA%BA%E3%81%AB%E3%81%97%E3%81%8B%E8%A6%8B%E3%81%88%E3%81%AA%E3%81%84%E7%94%BB%E5%83%8F%E9%9B%86.jpg","https://files.imishincdn.com/wp-content/uploads/2019/03/db2c08b31227720b2e598adaff08929e.jpg","data:image/jpeg;base64,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"];
+            setInterval(() => {
+                document.getElementById("all").style.color = `rgb(${red},13,${red*0.8})`;
+                document.getElementById("Scratch").style.color = `rgb(10,${red*0.8},15)`;
+                document.getElementById("HTML").style.color = `rgb(10,${red/2},${red})`;
+                document.getElementById("Javascript").style.color = `rgb(17,${red},${red*2})`;
+                // document.getElementById("all").style.backgroundColor=  `rgb(${43},${red/(6/2)},${red*(6/3)},0.9)`;
+                document.getElementById("h").style.color = `rgb(17,${red},${red*2})`;
+                
+                
+                
+
+                if(red >= 255){
+ 
+                    bool=1;
+                }
+                if(red <= 100){
+                    bool=0;
+                }
+                if(bool === 1){
+                    red-=7;
+                }
+                if(bool === 0){
+                    red+=7;
+                }
+            }, 100);
+            setInterval(() => {
+                document.getElementById("all").style.fontWeight=`${w}`;
+                document.getElementById("h").style.fontWeight= `${w}`;
+                document.getElementById("all").style.backgroundColor=  `rgb(43,${red/6},255)`;
+
+                document.getElementById("top").style.backgroundImage=  `url(${ImgList[imgIndex]})`;
+                document.getElementById("b1").style.borderRadius = `${radius}px`
+                document.getElementById("b2").style.borderRadius = `${radius}px`
+                document.getElementById("b3").style.borderRadius = `${radius}px`
+
+
+                if(w >= 900){
+                    bool2=1;
+
+                }
+                if(w <=400){
+                    bool2=0;
+                }
+                if(bool2 === 0){
+                    w=900;
+                }
+                if(bool2=== 1){
+                    w=100;
+                }
+                if(imgIndex> ImgList.length){
+                    imgIndex = -1;
+
+                }
+                if(radius>= 15){
+                    radius=0;
+
+                }
+                else{
+                    radius+=15
+                }
+                console.log(radius)
+                
+
+                imgIndex+=1
+                console.log(imgIndex);
+            
+                
+            }, 50);
+           
+        </script>
+
+    </head>
+    
+    <body id="all">
+
+        <header>
+            <h1 id="h">目が悪くなるサイト</h1>
+            <nav class="top-nav">
+                <ul>
+                    
+                    <li ><a href="#Scratch" id="b1">視力検査</a></li>
+                    <li><a href="#HTML" id="b2">網膜剥離手術</a></li>
+                    <li><a href="#Javascript" id="b3">ブルーライト増強めがね</a></li>
+                    <!-- <li><a href="#foo">お問合せわこちら</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        <div class="top" id="top">
+            <h2>Gözlerini koruyamayanların koruyacağı hiçbir şey yoktur.</h2>
+        </div>
+    <div class="str">
+        <article>
+            <h2　id="H2">目の病気の種類</h2>
+            <p>盲目にもなりかねない、目の病について解説します</p>
+            <section id="Scratch" class="section1">
+                <h3>白内障</h3>
+                <p>白内障は眼の中のレンズ（水晶体）が白く濁ってしまう病気です。</p>
+
+            </section>
+            <section id="HTML" class="section2">
+                <h3>緑内障</h3>
+                <p id="sp2">緑内障とは、目から入ってきた情報を脳に伝達する視神経という神経が圧迫され、損傷を受けたことで視野が徐々に狭くなっていく病気です。</p>
+            </section>
+            <section id="Javascript" class="section3">
+                <h3>網膜剥離</h3>
+                <p id="sp">網膜剥離とは眼球の内側にある膜が剥がれて視力が低下する病気です</p>
+                
+            </section>
+        </article>
+        <aside>
+            <h4>白内障と緑内障</h4>
+            <p>白内障と緑内障は全く違う病気です、ブリとハマチくらい違います</p>
+            <p>私はハマチの方が好きです</p>
+        </aside>
+        
+        <footer id="foo">
+            <a href="mailto:misomiyamo@gmail.com">クレームはこちら</a>
+            <p>&copy;Example</p>
+        </footer>
+
+        <div class="box1">目に優しいと言って過言ではないzone</div>
+        <!-- <div class="box2">目に優しいPINK_version</div> -->
+    </div>
+
+    </body>
+</html>
